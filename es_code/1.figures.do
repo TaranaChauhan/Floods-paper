@@ -29,7 +29,7 @@ cd "C:\Users\taran\Dropbox\ES_submission" // set directory
 
 ****************************** Fig 2 ****************************************
 
-import delimited  "es_data\fig2.csv", clear
+import delimited  "es_data\fig2_data.csv", clear
 sort state_code year
 
 gen label=_n
@@ -46,7 +46,7 @@ twoway (bar num_const label ,   vertical fcolor(white) lcolor(black)  lwidth(med
 	   
 gr export "fig2.png", replace
 
-
+******************************************************************************/
 
 import delimited "es_data\twfe_rd_data.csv", clear
 
