@@ -275,7 +275,7 @@ merge 1:m constituency_fe using `rd_merge'
 keep if _merge==3
 drop _merge
 
-count //1479
+count // 1639
 
 
 gen ln_nonag_emp=ln(ec13_emp_all)
@@ -306,7 +306,7 @@ matrix results[`i',2]=e(tau_cl)
 matrix results[`i',3]=e(se_tau_cl) 
 matrix results[`i',4]=e(pv_cl)
 matrix results[`i',5]=e(ci_l_cl)
-matrix results[`i',6]=e(ci_l_cl)
+matrix results[`i',6]=e(ci_r_cl)
  matrix results[`i',7]=e(N_h_l) 
   matrix results[`i',8]=e(N_h_r) 
 local i=`i'+1
