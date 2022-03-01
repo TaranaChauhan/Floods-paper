@@ -13,4 +13,4 @@ No.   Data						Source					URL
 4.    Monthly DMSP night lights of India (2008-13)      Earth Observation Group (paid service)  https://payneinstitute.mines.edu/eog/nighttime-lights/
 
 
-The data and code folders were last updated on October 5, 2021.
+The data and code folders were last updated on March 1, 2022.
