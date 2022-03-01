@@ -4,6 +4,7 @@
 #PAPER: Do political motivations affect recovery from hazards? Analysis of floods in India
 #AUTHOR: Tarana Chauhan (tc678@cornell.edu)
 #DATE: October 4, 2021
+# LAST UPDATED: March 1, 2022
 
 # FILE PURPOSE: Code for Figure 3, Tables 4, 5 and 6
   # Fig 3: Group-time average treatment effects under conditional parallel trends' assumption
@@ -24,7 +25,7 @@ library(tibble)
 library(ggplot2)
 
 # sET-UP
-setwd("C:/Users/taran/Dropbox/ES_submission") # set directory
+setwd("C://Users//taran//Dropbox//dell fall 2018//PhD 2018//University//Research//Elections//ES_submission")
 
 ################################################################################
 
@@ -44,7 +45,7 @@ atts_ny <- att_gt(yname = "nl_med",
                #xformla = NULL, # no covariates
                xformla = ~ population , # with covariates
                est_method = "dr", # "dr" is doubly robust. "ipw" is inverse probability weighting. "reg" is regression
-               control_group = "notyet_flood", # set the comparison group which is either "nevertreated" or "notyettreated" 
+               control_group = "notyettreated", # set the comparison group which is either "nevertreated" or "notyettreated" 
                bstrap = TRUE, # if TRUE compute bootstrapped SE
                biters = 1000, # number of bootstrap iterations
                print_details = FALSE, # if TRUE, print detailed results
@@ -59,7 +60,7 @@ atts_nev <- att_gt(yname = "nl_med",
                   #xformla = NULL, # no covariates
                   xformla = ~ population , # with covariates
                   est_method = "dr", # "dr" is doubly robust. "ipw" is inverse probability weighting. "reg" is regression
-                  control_group = "never_flood", # set the comparison group which is either "nevertreated" or "notyettreated" 
+                  control_group = "nevertreated", # set the comparison group which is either "nevertreated" or "notyettreated" 
                   bstrap = TRUE, # if TRUE compute bootstrapped SE
                   biters = 1000, # number of bootstrap iterations
                   print_details = FALSE, # if TRUE, print detailed results
@@ -67,10 +68,13 @@ atts_nev <- att_gt(yname = "nl_med",
                   panel = TRUE) # whether the data is panel or repeated cross-sectional
 
 # Aggregate ATT
-agg_effects_ny <- aggte(atts_ny, type = "simple", alp = .1)
+#agg_effects_ny <- aggte(atts_ny, type = "simple", alp = .1)
+agg_effects_ny <- aggte(atts_ny, type = "group")
+
 summary(agg_effects_ny)
 
-agg_effects_nev <- aggte(atts_nev, type = "simple", alp=.1)
+#agg_effects_nev <- aggte(atts_nev, type = "simple", alp=.1)
+agg_effects_nev <- aggte(atts_nev, type = "group")
 summary(agg_effects_nev)
 
 
@@ -78,9 +82,9 @@ summary(agg_effects_nev)
 # 3. Figure 3
 
 ggdid(atts_ny)
-ggsave("fig3_a.jpg")
+ggsave("es_fig/fig3_a.png")
 ggdid(atts_nev)
-ggsave("fig3_b.jpg")
+ggsave("es_fig/fig3_b.png")
 
 # 4. Tables 3 and 4
 
