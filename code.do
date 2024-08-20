@@ -89,7 +89,7 @@
 	local reference "& \multicolumn{3}{c}{Last 1 month as reference} &   \multicolumn{3}{c}{Last 2 months as reference} \\"
 	local numbers "& (1) & (2) & (3) & (4) & (5) & (6) \\ \hline"
 
-	esttab est* using table_3.tex, keep(int* flood_shock )  order(int* flood_shock )   se nogaps label   brackets star(* 0.10 ** 0.05 *** 0.01) b(%12.3f) se(%12.3f) r2(%12.3f)   coeflabels(int1 "FloodShock * Post 1 month" int2 "FloodShock * Post 2 months"  int3 "FloodShock * Post 3 months"  flood_shock "Flood Shock") mlabels(none) nonumbers posthead("`y'" "`reference'"  "`numbers'")  scalars("cg Comparison group mean"  "hasunitfe Unit FE" "hastimefe Time FE" "hasX Time-varying controls" "hasCF Cloud cover")    substitute(% \%) title(Fixed effects estimation: Recovery of economic activity after flood shock) replace
+	esttab est* using table_2.tex, keep(int* flood_shock )  order(int* flood_shock )   se nogaps label   brackets star(* 0.10 ** 0.05 *** 0.01) b(%12.3f) se(%12.3f) r2(%12.3f)   coeflabels(int1 "FloodShock * Post 1 month" int2 "FloodShock * Post 2 months"  int3 "FloodShock * Post 3 months"  flood_shock "Flood Shock") mlabels(none) nonumbers posthead("`y'" "`reference'"  "`numbers'")  scalars("cg Comparison group mean"  "hasunitfe Unit FE" "hastimefe Time FE" "hasX Time-varying controls" "hasCF Cloud cover")    substitute(% \%) title(Fixed effects estimation: Recovery of economic activity after flood shock) replace
 	
 	
 		
@@ -126,7 +126,7 @@
 	local numbers "& (1) & (2) \\ \hline"
 
 
-	esttab est* using table_2.tex, keep(int_t_* )   se nogaps label   brackets star(* 0.10 ** 0.05 *** 0.01) b(%12.3f) se(%12.3f) r2(%12.3f)   coeflabels(int_t_1 "FloodShock * m-3" int_t_2 "FloodShock * m-2" int_t_3 "FloodShock * m-1" int_t_4 "FloodShock * m0" int_t_5 "FloodShock * m+1" int_t_6 "FloodShock * m+2" int_t_7 "FloodShock * m+3" ) mlabels(none) nonumbers posthead("`y'" "`numbers'")  scalars("cg Comparison group mean"  "hasunitfe Unit FE" "hastimefe Time FE" "hasX Time-varying controls" "hasCF Cloud cover")  title(Month-wise differences in Y by flood shock)  substitute(% \%) replace
+	esttab est* using table_3.tex, keep(int_t_* )   se nogaps label   brackets star(* 0.10 ** 0.05 *** 0.01) b(%12.3f) se(%12.3f) r2(%12.3f)   coeflabels(int_t_1 "FloodShock * m-3" int_t_2 "FloodShock * m-2" int_t_3 "FloodShock * m-1" int_t_4 "FloodShock * m0" int_t_5 "FloodShock * m+1" int_t_6 "FloodShock * m+2" int_t_7 "FloodShock * m+3" ) mlabels(none) nonumbers posthead("`y'" "`numbers'")  scalars("cg Comparison group mean"  "hasunitfe Unit FE" "hastimefe Time FE" "hasX Time-varying controls" "hasCF Cloud cover")  title(Month-wise differences in Y by flood shock)  substitute(% \%) replace
 	
 	
 	
