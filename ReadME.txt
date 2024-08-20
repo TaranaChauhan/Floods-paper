@@ -1,16 +1,13 @@
-Paper title: Do political motivations affect recovery from hazards? Analysis of floods in India
-Author: Tarana Chauhan (tc678@cornell.edu)
+Paper title: Political incentives and flood recovery in India
+Author: Tarana Chauhan
+Last updated: August 20, 2024
 
-This repository contains the anonymised and final data and code used to generate output tables and figures for the paper. 
 
-The following raw data were utilised:
-
+This repository contains a) the anonymized dataset used for analysis, and b) the code used to generate tables and figures in the manuscript.
+Below is information on the individual datasets used in the analysis. All raw data files, except dataset (4), are publicly available through the provided URL.
 
 No.   Data						Source					URL
 1     State election outcomes in India    		TCPD Indian Elections Data v2.0		https://lokdhaba.ashoka.edu.in/browse-data
 2     Socio-economic outcomes of constituencies         SHRUG v1.5                              https://www.devdatalab.org/shrug_download/        
-3.    Flood layers of Indian states (2008-13)           Bhuvan (ISRO)                           https://bhuvan-app1.nrsc.gov.in/thematic/thematic/index.php    
-4.    Monthly DMSP night lights of India (2008-13)      Earth Observation Group (paid service)  https://payneinstitute.mines.edu/eog/nighttime-lights/
-
-
-The data and code folders were last updated on March 1, 2022.
+3.    Flood layers of Indian states (2000-13)           Global Flood Database v1                https://developers.google.com/earth-engine/datasets/catalog/GLOBAL_FLOOD_DB_MODIS_EVENTS_V1    
+4.    Monthly DMSP night lights of India (2008-13)      Earth Observation Group (proprietary) 	https://payneinstitute.mines.edu/eog/nighttime-lights/
